@@ -6,6 +6,7 @@
 // Note: The way that the robot is "facing" is irrelevant. 'R' will always make the robot move to the right once, 'L' will always make it move left, etc. Also, assume that the magnitude of the robot's movement is the same for each move.
 
 #include <string>
+#include <iostream>
 
 class Solution {
 public:
@@ -30,3 +31,10 @@ public:
         return (x == 0 && y == 0);
     }
 };
+
+int main() {
+    Solution sol;
+    std::string moves = "UDLR";
+    std::cout << std::boolalpha << sol.judgeCircle(moves) << std::endl;
+    return 0;
+}
