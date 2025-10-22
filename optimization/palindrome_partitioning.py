@@ -13,11 +13,14 @@ class Solution:
 
         res = []
         for i in range(1, len(s) + 1):
+            # checking if start to i is a palindrome
             prefix = s[:i]
             
             if prefix == ''.join(reversed(prefix)):
+                # if it is, we partition the rest of the string
                 suffix = self.partition(s[i:])
                 for j in suffix:
+                    # combining all the partitions
                     res.append([prefix] + j)
         
         return res
