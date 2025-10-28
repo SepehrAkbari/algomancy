@@ -1,14 +1,15 @@
-// LEETCODE 73
+// LEETCODE 73 (Medium)
 
 // Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 // You must do it in place.
 
 #include <vector>
 #include <iostream>
+using namespace std;
 
 class Solution {
 public:
-    void setZeroes(std::vector<std::vector<int>>& matrix) {
+    void setZeroes(vector<vector<int>>& matrix) {
         if (matrix.empty() || matrix[0].empty()) {
             return;
         }
@@ -18,8 +19,8 @@ public:
         int n = matrix[0].size();
 
         // zeros in rows and columns
-        std::vector<bool> zrows(m, false);
-        std::vector<bool> zcols(n, false);
+        vector<bool> zrows(m, false);
+        vector<bool> zcols(n, false);
 
         // mark zeros in rows and columns
         for (int i = 0; i < m; ++i) {
@@ -53,7 +54,7 @@ public:
 
 int main() {
     Solution solution;
-    std::vector<std::vector<int>> matrix = {
+    vector<vector<int>> matrix = {
         {1, 1, 1},
         {1, 0, 1},
         {1, 1, 1}
@@ -62,9 +63,9 @@ int main() {
 
     for (const auto& row : matrix) {
         for (const auto& val : row) {
-            std::cout << val << " ";
+            cout << val << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
     return 0;
 }
