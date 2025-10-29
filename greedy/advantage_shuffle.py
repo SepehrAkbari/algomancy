@@ -8,12 +8,6 @@ Return any permutation of nums1 that maximizes its advantage with respect to num
 
 from typing import List
 
-# step by step explanation:
-# 1. Sort nums1 to facilitate finding the smallest number greater than a given number.
-# 2. For each number in nums2, use binary search to find the smallest number in nums1 that is greater than that number.
-# 3. If such a number is found, assign it to the result for that index and remove it from nums1.
-# 4. If no such number is found, assign the smallest number in nums1 to that index and remove it from nums1.
-# 5. Return the result array.
 def main(nums1: List[int], nums2: List[int]) -> List[int]:
     nums1.sort()
 
