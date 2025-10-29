@@ -6,16 +6,18 @@ This repository is a personal collection of algorithmic challenges and problems 
 
 Every problem is categorized into one of the following folders.
 
-- [Arrays](./arrays/)
-- [Greedy](./greedy/)
-- [Math](./math/)
-- [Recursion](./recursion/)
-- [Search](./search/) 
-- [Structures](./structures/)
+- [Arrays](./arrays/): linear data collections and basic manipulations.
+- [Structures](./structures/): non-linear data structures and organizations.
+- [Recursion](./recursion/): recursive and dynamic programming.
+- [Greedy](./greedy/): local optimization and heuristic approaches.
+- [Search](./search/): state-space exploration and pathfinding.
+- [Math](./math/): all things mathematical.
+
+Some problems are placed inside subfolders ending with `_gpu` which are GPU-accelerated implementations. Other subfolders simply mean different variations of the same problem.
 
 ## Languages
 
-I try to challenge myself by solving in different languages, especially the ones I don't use often. 
+I try to challenge myself by solving in different languages, especially the ones I don't use often.
 
 ## Contributing
 
