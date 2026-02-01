@@ -14,3 +14,9 @@ def expected_value_discrete(x, p):
     x = np.asarray(x)
     p = np.asarray(p)
     return np.sum(x * p)
+
+
+if __name__ == "__main__":
+    x = [1,2,3,4]
+    p = [0.1,0.2,0.3,0.4]
+    print(expected_value_discrete(x, p))

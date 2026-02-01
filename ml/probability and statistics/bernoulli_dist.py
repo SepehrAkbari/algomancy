@@ -21,9 +21,8 @@ def bernoulli_pmf_and_moments(x, p):
 
 
 if __name__ == "__main__":
-    x=[0, 1, 0, 1]
-    p=0.3
-    
+    x = [0, 1, 0, 1]
+    p = 0.3
     print(bernoulli_pmf_and_moments(x, p))
     
     
