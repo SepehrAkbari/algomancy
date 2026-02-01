@@ -1,5 +1,5 @@
 '''
-Sigmoid function vectorized implementation.
+Sigmoid Activation Function.
 '''
 
 import numpy as np
