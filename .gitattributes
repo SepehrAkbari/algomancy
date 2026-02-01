@@ -1,1 +1,2 @@
-*_gpu/** linguist-language=CUDA
+gpu/** linguist-language=CUDA
+ml/** linguist-vendored

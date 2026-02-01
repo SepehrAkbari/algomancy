@@ -4,16 +4,10 @@ This repository is a personal collection of algorithmic challenges and problems 
 
 ## Contents
 
-Every problem is categorized into one of the following folders.
-
-- [Arrays](./arrays/): linear data collections and basic manipulations.
-- [Structures](./structures/): non-linear data structures and organizations.
-- [Recursion](./recursion/): recursive and dynamic programming.
-- [Greedy](./greedy/): local optimization and heuristic approaches.
-- [Search](./search/): state-space exploration and pathfinding.
-- [Math](./math/): all things mathematical.
-
-Some problems are placed inside subfolders ending with `_gpu` which are GPU-accelerated implementations. Other subfolders simply mean different variations of the same problem.
+- [ml](./ml/): Machine learning related problems and experiments.
+- [leetcode](./leetcode/): Solutions to problems from [LeetCode](https://leetcode.com/) and similar platforms.
+- [gpu](./gpu/): GPU programming challenges, mostly from [LeetGPU](https://leetgpu.com/)
+- [misc](./misc/): Problems I've encountered in various contexts.
 
 ## Languages
 
