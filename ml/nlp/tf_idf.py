@@ -38,9 +38,6 @@ def tfidf_vectorizer(documents):
     if not documents or all(doc.strip() == "" for doc in documents):
         return np.array([]), []
     
-    if not isinstance(documents, list):
-        raise ValueError
-    
     tokenized = [doc.lower().split() for doc in documents]
     
     all_tokens = set()
@@ -57,7 +54,7 @@ def tfidf_vectorizer(documents):
     n_vocab = len(vocab)
     
     if n_vocab == 0 or n_docs == 0:
-        return np.zeros((n_docs, n_vocab)), vocab
+        return np.array([]), []
     
     df = Counter()
     for doc in tokenized:
@@ -72,15 +69,15 @@ def tfidf_vectorizer(documents):
     tfidf_matrix = np.zeros((n_docs, n_vocab), dtype=float)
     
     for doc_idx, doc in enumerate(tokenized):
+        doc_len = len(doc)
+        if doc_len == 0:
+            continue
+        
         term_counts = Counter(doc)
         for word, count in term_counts.items():
             if word in word_to_idx:
                 w_idx = word_to_idx[word]
-                tfidf_matrix[doc_idx, w_idx] = count * idf[word]
+                tf = count / doc_len
+                tfidf_matrix[doc_idx, w_idx] = tf * idf[word]
                 
     return tfidf_matrix, vocab
-    
-    
-if __name__ == "__main__":
-    documents = ["the cat sat", "the dog ran"]
-    print(tfidf_vectorizer(documents))
