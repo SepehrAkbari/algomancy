@@ -10,6 +10,9 @@ def matrix_normalization(matrix, axis=None, norm_type='l2'):
     """
     matrix = np.asarray(matrix, dtype=float)
     
+    if matrix.ndim != 2:
+        raise ValueError
+    
     if norm_type == 'l1':
         norm = np.sum(np.abs(matrix), axis=axis, keepdims=True)
     elif norm_type == 'l2':
@@ -19,7 +22,7 @@ def matrix_normalization(matrix, axis=None, norm_type='l2'):
     else:
         raise ValueError
     
-    norm[norm == 0] = 1
+    norm = np.where(norm == 0, 1, norm)
     return matrix / norm
 
 
