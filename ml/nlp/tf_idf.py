@@ -1,29 +1,5 @@
 '''
 TF-IDF Vectorizer.
-
-Implement a TF-IDF vectorizer that converts text documents into numerical feature vectors. Return both the TF-IDF matrix and the vocabulary.
-
-Examples
-
-Input: documents=["the cat sat", "the dog ran"]
-Output: matrix shape (2, 5), vocab=["cat", "dog", "ran", "sat", "the"]
-Input: documents=["hello world", "world hello hello"]
-Output: matrix shape (2, 2), vocab=["hello", "world"]
-
-💡 Hint 1
-Use str.split() and str.lower() for tokenization. Use set() to build vocabulary and sorted() for consistent ordering.
-💡 Hint 2
-Use Counter for term frequencies and document frequency counting. Use math.log() for IDF calculation.
-💡 Hint 3
-Use np.zeros() to initialize the matrix. Create a word-to-index mapping with enumerate() for efficient matrix filling.
-
-Requirements
-
-Return tuple: (tfidf_matrix, vocabulary)
-tfidf_matrix: np.ndarray of shape (n_docs, n_vocab)
-vocabulary: list[str] of unique terms, sorted alphabetically
-Tokenize by splitting on whitespace and converting to lowercase
-Handle empty documents and empty corpus gracefully
 '''
 
 import numpy as np
@@ -81,3 +57,9 @@ def tfidf_vectorizer(documents):
                 tfidf_matrix[doc_idx, w_idx] = tf * idf[word]
                 
     return tfidf_matrix, vocab
+
+
+if __name__ == "__main__":
+    documents = ["the cat sat", "the dog ran"]
+    matrix, vocab = tfidf_vectorizer(documents)
+    print(f"{matrix.shape}, {vocab}")
