@@ -137,10 +137,11 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, choices=["pretrain", "sentiment"], required=True)
     parser.add_argument("--text", type=str, required=True)
     parser.add_argument("--text2", type=str, default="jumps over the dog")
-    
-    bert = BERT(vocab=VOCAB, weights='tiny')
+    parser.add_argument("--encoder", type=str, default="random", choices=["random", "tiny"])
     
     args = parser.parse_args()
+    
+    bert = BERT(vocab=VOCAB, weights=args.encoder)
     
     if args.task == "sentiment":
         train_data = [
