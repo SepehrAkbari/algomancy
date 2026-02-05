@@ -26,7 +26,11 @@ python phase<number>_<name>.py
 To run the complete BERT model for pre-training and sentiment analysis:
 
 ```bash
-python bert.py [-h] --task {pretrain,sentiment} --text "First text." [--text2 "Second text."] [--encoder {tiny,random}]
+python bert.py [-h] 
+               --task {pretrain,sentiment} 
+               --text "First text." 
+               [--text2 "Second text."] 
+               [--encoder {tiny,random}]
 ```
 
 The `random` encoder initializes weights randomly, while the `tiny` encoder uses pre-trained weights from the bert-tiny model which can be downloaded using:
