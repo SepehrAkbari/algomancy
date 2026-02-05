@@ -4,3 +4,5 @@
 *.cache
 testing.ipynb
 .github
+__pycache__/
+*_weights.npz
