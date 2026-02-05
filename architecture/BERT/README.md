@@ -13,7 +13,7 @@ The model is built using NumPy exclusively, and all code is vectorized. The impl
 5. [BERT Pooler](./phase5_pooler.py)
 6. [Encoder](./phase6_encoder.py)
 
-Every phase can be run independently. The complete BERT model is assembled in [bert.py](./bert.py), which showcases the pre-training and sentiment analysis tasks using [bert-tiny weight](https://huggingface.co/prajjwal1/bert-tiny) from Praj Bhargava. The vocabulary corpus used is [BERT Base Uncased](https://huggingface.co/google-bert/bert-base-uncased) from Google Research.
+Every phase can be run independently. The complete BERT model is assembled in [bert.py](./bert.py), which showcases the pre-training and sentiment analysis tasks using [bert-tiny weights](https://huggingface.co/prajjwal1/bert-tiny) from Praj Bhargava. The vocabulary corpus used is [BERT Base Uncased](https://huggingface.co/google-bert/bert-base-uncased) from Google Research.
 
 ## Usage
 
