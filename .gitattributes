@@ -1,3 +1,4 @@
 gpu/** linguist-language=CUDA
 ml/** linguist-documentation
 architecture/** linguist-documentation
+sorting/** linguist-documentation
