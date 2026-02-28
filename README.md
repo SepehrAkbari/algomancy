@@ -7,6 +7,7 @@ This repository is a personal collection of algorithmic challenges and problems 
 - [architecture](./architecture/): My implementations of models from original research papers.
 - [ml](./ml/): Machine learning related problems and experiments.
 - [leetcode](./leetcode/): Solutions to problems from [LeetCode](https://leetcode.com/) and similar platforms.
+- [sorting](./sorting/): Implementation of various sorting algorithms.
 - [gpu](./gpu/): GPU programming challenges, mostly from [LeetGPU](https://leetgpu.com/)
 - [misc](./misc/): Problems I've encountered in various contexts.
 
